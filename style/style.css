@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* section {
+    position: relative; /* Pour positionner les éléments relatifs à la page
+    z-index: 1; /* Par défaut, en dessous du canvas 
+    background-color: rgba(255, 255, 255, 0.8); Fond semi-transparent pour voir le canvas en dessous 
+    padding: 20px;
+} */
+
+img {
+    width: 80%;
+    /* height: 100%; */
+    opacity: 50%;
+}
