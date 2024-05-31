@@ -4,17 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godement Lancelot</title>
+    <meta name="description" content="Page de présentation de Lancelot Godement.">
+    <meta name="keywords" content="Lancelot Godement, site">
+    <meta name="author" content="Lancelot Godement">
     <script defer src="./script/opener.js"></script>
+    <script defer src="./script/scroller.js"></script>
+    <script defer src="./script/panneauReturn.js"></script>
+    <script defer src="./script/photogallery.js"></script>
+    <script defer src="./script/moredesign.js"></script>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="gate"></canvas>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <section>
-        <canvas id="gate"></canvas>
+        <article class="onecolumn">
+            <p id="firstline">
+                Passionné de développement, j’aime mettre mes compétences au service des autres. Insatiable curieux, j’apprends toujours plus pour devenir chaque jour une version améliorée de moi-même.
+            </p>
+        </article>
     </section>
     <section>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique soluta hic recusandae nisi explicabo repellendus a, modi aspernatur ipsum tempora aliquam laudantium possimus amet aut dignissimos quis voluptates qui magni.
-        </p>
+        <article>
+            <div>
+                <h2>Formation</h2>
+                <h4>Licence Informatique</h4>
+                <p>
+                    A l'Université de Caen, nous apprenons les bases du web, du développement logiciel, de la gestion de base de données, de l'algorithmie et des mathématiques.
+                </p>
+                <h4>Master Informatique : Décision et OPtimisation</h4>
+                <p>
+                    Base théorique de l'apprentissage, de l'IA, ainsi que des systèmes multi-agent et du traitement de données à grande échelle.
+                </p>
+            </div>
+            <img src="./images/unicaen.png" alt="Unicaen">
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+            <h3>Développement</h3>
+            <div id="boxtech" class=".box gradient-green">
+                <img src="./images/icons/Csharp.png" alt="C#">
+                <img src="./images/icons/dart.png" alt="Dart">
+                <img src="./images/icons/python.png" alt="Python">
+                <img src="./images/icons/nodejs.png" alt="nodejs">
+                <img src="./images/icons/java.png" alt="java">
+                <img src="./images/icons/js.png" alt="JS">
+                <img src="./images/icons/C.png" alt="C">
+                <img src="./images/icons/php.png" alt="PHP">
+                <img src="./images/icons/html.png" alt="html">
+                <img src="./images/icons/css.png" alt="css">
+                <img src="./images/icons/C++.png" alt="C++">
+                <img src="./images/icons/R.png" alt="R">
+                <img src="./images/icons/mysql.png" alt="mysql">
+                <img src="./images/icons/postgresql.png" alt="psql">
+                <img src="./images/icons/latex.png" alt="latex">
+                <img src="./images/icons/flutter.png" alt="flutter">
+                <img src="./images/icons/IA.png" alt="IA">
+                <div></div>
+                <img src="./images/icons/bigdata.png" alt="bigdata">
+                <img src="./images/icons/android.png" alt="android">
+            </div>
+            <script src="./script/gsap.min.js"></script>
+            <script defer src="./script/gsapconfig.js"></script>
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+            <h2>Projets Personnels</h2>
+            <div id="ProjetsPerso">
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/derushvideo">Derush Video</a>
+                        <div>
+                            <span>Python</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel permettant de dérusher facilement une vidéo et générant des fichiers MP4.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Prospect App</a>
+                        <div>
+                            <span>Dart</span><span>Flutter</span><span>Google Sheets</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Application mobile de prospection couplée à une simulation d'API reliée à un tableur en ligne.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/TwitchPointCounterApp">Twitch Point Counter App</a>
+                        <div>
+                            <span>C#</span><span>.NET</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel relié à la plateforme Twitch, permettant d'attribuer des points aux viewveurs selon différentes actions et de le retransmettre en direct sur un overlay dynamique.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/exportSelectedVideo">Export Selected Video</a>
+                        <div>
+                            <span>Python</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel prenant en entrée une vidéo possédant une ou plusieurs langue audio et sous-titrage disponibles et produisant une vidéo MP4 avec les paramètres choisis.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Youtube Downloader</a>
+                        <div>
+                            <span>C#</span> <span>.NET</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Protype permettant de télécharger massivement et simplement des vidéos youtube. 
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Generate OST Video</a>
+                        <div>
+                            <span>Python</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Utilitaire permettant de générer des vidéos à partir de fichiers audio et d'une pochette. Pensé pour être utiliser sur des albums d'OST.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Bloom Demo Mailer</a>
+                        <div>
+                            <span>NodeJS</span> <span>JavaScript</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Prototype permettant d'envoyer le contact de l'utilisateur par mail au destinataire.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Upscale Video</a>
+                        <div>
+                            <span>Python</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Prototype visant à simplifier le processus d'upscale d'une vidéo vers du 1080p 30 fps.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Pomodoro Project</a>
+                        <div>
+                            <span>C#</span> <span>.NET</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel de gestion de temps de travail selon la méthode Pomodoro. Peut-être ajusté selon le bon vouloir de l'utilisateur. 
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a>Edit Propriety</a>
+                        <div>
+                            <span>Java</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Prototype de logiciel d'édition de propriété de fichier. En cours de restructuration.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/detectedchangedscene">Detected Changed Scene</a>
+                        <div>
+                            <span>Python</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel de détection de changement de scène dans une vidéo au format MP4. Permet par la suite de sélectionner précisément les rush à découper, puis s'occupe automatiquement de l'édition des rushs au format MP4.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/RenameFilesVideo">Rename Files Video</a>
+                        <div>
+                            <span>C#</span> <span>.NET</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Logiciel de renommage massif de vidéo selon des tags choisis par l'utilisateur. Entièrement customisable. 
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/TwitchBarVote">Twitch Bar Vote</a>
+                        <div>
+                            <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Overlay à destination d'OBS permettant de suivre dynamiquement les votes du chat via la plateforme Twitch.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>
+                        <a href="https://github.com/Kaminosaibasora/OverlayWheelRandomChoice">Overlay Wheel Random Choice</a>
+                        <div>
+                            <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Overlay à destination d'OBS permettant de choisir aléatoirement une  proposition plassée sur une roue.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+            <h3>Modélisation 3D</h3>
+            <iframe src="https://gmail3992894.autodesk360.com/shares/public/SH512d4QTec90decfa6e79cd7692e78f5ccb?mode=embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            <p>
+                Passionné depuis longtemps par la modélisation 3D, j'y consacre aujourd'hui une part de mon temps, afin de parfaire mes créations, que ce soit sur le plan de la modélisation, de la conception ou de son impression.
+            </p>
+            <iframe src="https://gmail3992894.autodesk360.com/shares/public/SH512d4QTec90decfa6e65d4b50a301d3d11?mode=embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+            <h3>Photographie</h3>
+            <div id="photogallery" >
+                <img src="./images/photo/DSC00504.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC00594.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC00655.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01043.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01093.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01120.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01145.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01258.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01272.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01287.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01428.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01454.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01681.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC01852.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02009.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02297.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02351.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02476.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02602.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC02746.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC03042.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC03061.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC03092.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC03160.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC03198.jpg" alt="Photographie" >
+                <img src="./images/photo/DSC04687.jpg" alt="Photographie" >
+            </div>
+        </article>
+    </section>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+    <section>
+        <article class="onecolumn">
+            <h3>Plus loin ...</h3>
+            <canvas id="more" ></canvas>
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+            <h3>Curiculum Vitae</h3>
+            <div id="CVs">
+                <a href="./images/CV_Lancelot_Godement_2024.pdf" target="_blank">
+                    <img src="./images/CV.png" alt="CV2024">
+                </a>
+                <a href="./images/CV_lancelot_godement_2023.pdf" target="_blank">
+                    <img src="./images/CV2023.png" alt="CV2023">
+                </a>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article class="onecolumn">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:contact@lancelotgodement.fr">
+                            contact@lancelotgodement.fr
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+33644823738">
+                            06.44.82.37.38
+                        </a>
+                    </li>
+                </ul>
+        </article>
     </section>
 </body>
 </html>

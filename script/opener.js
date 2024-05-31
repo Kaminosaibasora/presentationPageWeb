@@ -1,9 +1,22 @@
+// ===================================================================
+
+// ========================== O P E N E R ============================
+
+// ===================================================================
+
+// ------------- INIT --------------------
+window.scrollTo(0, 0);
 var canvas = document.getElementById('gate');
 var ctx = canvas.getContext('2d');
 
 var data = [];
 var radiusCircle = 250;
+// ---------------------------------------
 
+/**
+ * Génère aléatoirement les données.
+ * @param {*} nbline nombre de ligne à générer.
+ */
 let generateData = (nbline) => {
     for (let i = 0; i < nbline; i++) {
         let cursor = Math.floor(Math.random()*(canvas.width/3));
@@ -19,9 +32,12 @@ let generateData = (nbline) => {
             }
         );
     }
-    console.log(data);
+    // console.log(data);
 }
 
+/**
+ * calcul de l'ouverture de chaque ligne de données.
+ */
 let openGateData = () => {
     data.forEach(line => {
         if (!line.finish) {
@@ -34,6 +50,9 @@ let openGateData = () => {
     })
 }
 
+/**
+ * Dessin de chaque ligne.
+ */
 let drawData = () => {
     let y = 0
     data.forEach(line => {
@@ -44,6 +63,9 @@ let drawData = () => {
     });
 }
 
+/**
+ * Fonction d'automatisation de l'ouverture de la porte.
+ */
 let openGate = () => {
     openGateData();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -63,6 +85,10 @@ let openGate = () => {
     }
 }
 
+/**
+ * dessin du cercle central.
+ * @param {*} radius 
+ */
 let cicleClickDraw = (radius) => {
     let gradient = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 0,  canvas.width / 2, canvas.height / 2, 250);
     gradient.addColorStop(0, randomColor());
@@ -79,6 +105,9 @@ let cicleClickDraw = (radius) => {
     ctx.fillText("Click it", canvas.width / 2, canvas.height / 2);
 }
 
+/**
+ * suppression du cercle central.
+ */
 let removeCicle = () => {
     radiusCircle -= 10;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -91,6 +120,9 @@ let removeCicle = () => {
     }
 }
 
+/**
+ * Mise à l'echel du canvas en cas de changement de taille.
+ */
 let resizeCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -101,17 +133,26 @@ let resizeCanvas = () => {
     }
 }
 
+/**
+ * tire une couleur au hasard.
+ * @returns une couleur au hasard.
+ */
 let randomColor = () => {
     let color = ["red", "blue", "yellow", "orange"]
     let index = Math.floor(Math.random() * color.length);
     return color[index];
 }
 
+/**
+ * Lance la supression du cercle.
+ * @param {*} event 
+ */
 function handleClick(event) {
     setTimeout('removeCicle()', 40);
     canvas.removeEventListener('click', handleClick);
 }
 
+// --------------------------------------------------------------
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 generateData(30);
@@ -119,3 +160,4 @@ drawData();
 cicleClickDraw(250);
 canvas.addEventListener('click', handleClick);
 document.documentElement.style.overflow = 'hidden';
+// --------------------------------------------------------------
